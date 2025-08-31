@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Gradient background animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient-slow {
+  background-size: 300% 300%;
+  animation: gradientShift 15s ease infinite;
+}
+
+/* Card hover glow animation */
+@keyframes cardHoverGlow {
+  0% { box-shadow: 0 0 10px #7f5af0 inset; }
+  50% { box-shadow: 0 0 20px #7f5af0 inset; }
+  100% { box-shadow: 0 0 10px #7f5af0 inset; }
+}
+
+.animate-card-hover:hover {
+  animation: cardHoverGlow 1.5s infinite alternate;
+}
+
+/* Logo glow animation */
+@keyframes logoGlow {
+  0% { filter: drop-shadow(0 0 10px #7f5af0); }
+  50% { filter: drop-shadow(0 0 20px #7f5af0); }
+  100% { filter: drop-shadow(0 0 10px #7f5af0); }
+}
+
+.animate-logo-glow {
+  animation: logoGlow 2s infinite alternate;
+}
